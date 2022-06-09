@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-
-
-def multiply_list_map(my_list=[], number=0):
-    """
-    returns a list with all values multiplied by a number
-    """
-    return (list(map(lambda x: x*number, my_list)))
+def best_score(a_dictionary):
+    if not a_dictionary:
+        return None
+    items = list(a_dictionary.items())
+    best_score_key, best_score = items[0]
+    for key, score in items[1:]:
+        if score > best_score:
+            best_score_key = key
+            best_score = score
+    return best_score_key
