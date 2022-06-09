@@ -44,6 +44,6 @@ for (i = 0; i < size; i++)
 type = (list->ob_item[i])->ob_type->tp_name;
 printf("Element %i: %s\n", i, type);
 if (!strcmp(type, "bytes"))
-rint_python_bytes(list->ob_item[i]);
+print_python_bytes(list->ob_item[i]);
 }
 }
